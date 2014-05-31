@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <title>Angular JS dynamic data binding to grid and selected item display</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/ng-grid.css" rel="stylesheet" />
+    <style>
+        .gridStyle {
+            border: 1px solid rgb(212,212,212);
+            height: 400px;
+            float: left;
+        }
+        .selectedItems {
+            float: left;
+        }
+    </style>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/ng-grid.js"></script>
+    <script src="~/app/js/controllers.js"></script>
+</head>
+<body ng-controller="MyCtrl">
+    <div class="row">
+        <div class="col-md-10">
+            <p>
+                <h2>AngularJS Demo - Persons List</h2>
+            </p>
+            <br />
+            <div class="gridStyle" ng-grid="gridOptions"></div>
+        </div>
+        <div class="col-md-10">
+            <p>
+                <div class="alert-info">{{mySelections}}</div>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
